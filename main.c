@@ -8,8 +8,8 @@ int main(){
     printf("2 -  PRESENCA DO ALUNO\n");
     printf("digite a opcao desejada");
     scanf("%d", &opcao);
-    switch (opcao)
-    { case 1: 
+    switch (opcao){
+     case 1: 
         printf("\n--- MEDIA DO ALUNO ---\n");
         printf("Digite sua primeira nota: ");
         scanf("%f", &nota_1);
@@ -23,15 +23,15 @@ int main(){
         printf("\n--- PRESENCA DO ALUNO ---\n");
         printf(" Digite a presenca do aluno (0 - 100): ");
         scanf("%d", &presenca);
-        if(presenca > 74);
-            printf("Aluno aprovado com %d %%, presenca");
-        } else {
-            printf("Aluno Reprovado com %d %%, presenca");
+        if(presenca > 74 && presenca < 100) {
+            printf("Aluno aprovado com %d %%", presenca);
+        } else if(presenca <= 0 || presenca < 74 ){
+            printf("Aluno reprovado com %d %%", presenca);
         }
         break;
 
         default:
         printf("opcao invalido!");
-        
+    }
         return 0;
 }
